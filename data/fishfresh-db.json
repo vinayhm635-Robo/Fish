@@ -1,0 +1,885 @@
+{
+  "users": [
+    {
+      "id": "usr-fish-1",
+      "name": "Ramesh Mogaveera",
+      "phone": "+91 98451 22410",
+      "role": "fisherman",
+      "verified": true,
+      "locationName": "Mangalore Bunder Harbor",
+      "lat": 12.8582,
+      "lng": 74.8321,
+      "createdAt": "2026-10-17T09:39:29.203Z"
+    },
+    {
+      "id": "usr-fish-2",
+      "name": "Sudhakar Karkera",
+      "phone": "+91 94481 77319",
+      "role": "fisherman",
+      "verified": true,
+      "locationName": "Malpe Fishing Harbor",
+      "lat": 13.3477,
+      "lng": 74.7029,
+      "createdAt": "2026-10-20T07:39:29.203Z"
+    },
+    {
+      "id": "usr-buyer-1",
+      "name": "Ananya Shetty (Machali Kitchen)",
+      "phone": "+91 99001 44520",
+      "role": "buyer",
+      "verified": true,
+      "locationName": "Hampankatta, Mangalore",
+      "lat": 12.8698,
+      "lng": 74.8431,
+      "createdAt": "2026-10-26T13:39:29.203Z"
+    },
+    {
+      "id": "usr-proc-1",
+      "name": "Karavali Dry-Fish & Marine Meal",
+      "phone": "+91 98802 66118",
+      "role": "processor",
+      "verified": true,
+      "locationName": "Ullal Processing Zone",
+      "lat": 12.8065,
+      "lng": 74.8559,
+      "createdAt": "2026-10-14T01:39:29.203Z"
+    },
+    {
+      "id": "usr-admin-1",
+      "name": "Dr. Kavitha Pai (Harbor Ops)",
+      "phone": "+91 97410 11009",
+      "role": "admin",
+      "verified": true,
+      "locationName": "Mangalore Fisheries Command",
+      "lat": 12.862,
+      "lng": 74.839,
+      "createdAt": "2026-10-09T21:39:29.203Z"
+    },
+    {
+      "id": "usr-deliv-1",
+      "name": "Prashanth Kulal (Cold Van)",
+      "phone": "+91 96115 88304",
+      "role": "delivery",
+      "verified": true,
+      "locationName": "Panambur Cold Hub",
+      "lat": 12.948,
+      "lng": 74.801,
+      "createdAt": "2026-10-30T17:39:29.203Z"
+    }
+  ],
+  "fishermanProfiles": [
+    {
+      "userId": "usr-fish-1",
+      "boatName": "Sea Breeze IV",
+      "boatRegNo": "KA-02-MM-4821",
+      "homeHarbor": "Mangalore Bunder Harbor",
+      "preferredLanguage": "kn",
+      "upiId": "ramesh.bunder@okicici",
+      "rating": 4.9
+    },
+    {
+      "userId": "usr-fish-2",
+      "boatName": "Matsya Deepa",
+      "boatRegNo": "KA-20-MM-1934",
+      "homeHarbor": "Malpe Fishing Harbor",
+      "preferredLanguage": "tulu",
+      "upiId": "sudhakar.malpe@oksbi",
+      "rating": 4.8
+    }
+  ],
+  "buyerProfiles": [
+    {
+      "userId": "usr-buyer-1",
+      "businessName": "Machali Coastal Kitchen & Hotel",
+      "buyerType": "restaurant",
+      "gstNumber": "29AABCM4912Q1Z5",
+      "completedOrdersCount": 14
+    }
+  ],
+  "processorProfiles": [
+    {
+      "userId": "usr-proc-1",
+      "facilityName": "Karavali Marine Recovery Co-op",
+      "processorType": "dry_fish",
+      "dailyCapacityKg": 1200,
+      "safetyCertified": true
+    }
+  ],
+  "fishSpecies": [
+    {
+      "id": "sp-mackerel",
+      "name": "Indian Mackerel (Bangude)",
+      "localNameKn": "ಬಂಗುಡೆ",
+      "localNameTulu": "Bangude",
+      "category": "Mackerel",
+      "defaultMarketRatePerKg": 240,
+      "middlemanRatePerKg": 175,
+      "decayRatePerHourPct": 3.4,
+      "maxFreshWindowHours": 10,
+      "suitableProcessors": [
+        "dry_fish",
+        "fish_meal"
+      ],
+      "defaultImageUrl": "/src/assets/images/fish_indian_mackerel_1794821247535.jpg"
+    },
+    {
+      "id": "sp-pomfret",
+      "name": "Silver Pomfret (Manji)",
+      "localNameKn": "ಮಾಂಜಿ",
+      "localNameTulu": "Manji",
+      "category": "Pomfret",
+      "defaultMarketRatePerKg": 760,
+      "middlemanRatePerKg": 580,
+      "decayRatePerHourPct": 2.6,
+      "maxFreshWindowHours": 12,
+      "suitableProcessors": [
+        "dry_fish"
+      ],
+      "defaultImageUrl": "/src/assets/images/fish_silver_pomfret_1794821248720.jpg"
+    },
+    {
+      "id": "sp-seer",
+      "name": "Seer Fish (Anjal)",
+      "localNameKn": "ಅಂಜಲ್",
+      "localNameTulu": "Anjal",
+      "category": "Seer fish",
+      "defaultMarketRatePerKg": 820,
+      "middlemanRatePerKg": 620,
+      "decayRatePerHourPct": 2.5,
+      "maxFreshWindowHours": 12,
+      "suitableProcessors": [
+        "dry_fish",
+        "fish_meal"
+      ],
+      "defaultImageUrl": "/src/assets/images/fish_king_seer_1794821248743.jpg"
+    },
+    {
+      "id": "sp-prawns",
+      "name": "Tiger Prawns (Yetti)",
+      "localNameKn": "ಸೀಗಡಿ",
+      "localNameTulu": "Yetti",
+      "category": "Prawns",
+      "defaultMarketRatePerKg": 540,
+      "middlemanRatePerKg": 410,
+      "decayRatePerHourPct": 4.1,
+      "maxFreshWindowHours": 8,
+      "suitableProcessors": [
+        "dry_fish",
+        "animal_feed"
+      ],
+      "defaultImageUrl": "/src/assets/images/fish_tiger_prawns_1794821249259.jpg"
+    },
+    {
+      "id": "sp-sardine",
+      "name": "Oil Sardine (Bhootai)",
+      "localNameKn": "ಭೂತಾಯಿ",
+      "localNameTulu": "Boodai",
+      "category": "Sardines",
+      "defaultMarketRatePerKg": 150,
+      "middlemanRatePerKg": 95,
+      "decayRatePerHourPct": 4.5,
+      "maxFreshWindowHours": 8,
+      "suitableProcessors": [
+        "fish_meal",
+        "dry_fish",
+        "animal_feed"
+      ],
+      "defaultImageUrl": "/src/assets/images/fish_indian_mackerel_1794821247535.jpg"
+    },
+    {
+      "id": "sp-tuna",
+      "name": "Yellowfin Tuna (Kedar)",
+      "localNameKn": "ಕೇದಾರ್",
+      "localNameTulu": "Kedar",
+      "category": "Tuna",
+      "defaultMarketRatePerKg": 320,
+      "middlemanRatePerKg": 230,
+      "decayRatePerHourPct": 3,
+      "maxFreshWindowHours": 11,
+      "suitableProcessors": [
+        "dry_fish",
+        "fish_meal"
+      ],
+      "defaultImageUrl": "/src/assets/images/fish_king_seer_1794821248743.jpg"
+    },
+    {
+      "id": "sp-squid",
+      "name": "Indian Squid (Bondas)",
+      "localNameKn": "ಬೋಂಡಾಸ್",
+      "localNameTulu": "Bondas",
+      "category": "Squid",
+      "defaultMarketRatePerKg": 360,
+      "middlemanRatePerKg": 265,
+      "decayRatePerHourPct": 3.6,
+      "maxFreshWindowHours": 9,
+      "suitableProcessors": [
+        "dry_fish",
+        "animal_feed"
+      ],
+      "defaultImageUrl": "/src/assets/images/fish_tiger_prawns_1794821249259.jpg"
+    },
+    {
+      "id": "sp-crab",
+      "name": "Mud Crab (Denji)",
+      "localNameKn": "ಏಡಿ",
+      "localNameTulu": "Denji",
+      "category": "Crab",
+      "defaultMarketRatePerKg": 480,
+      "middlemanRatePerKg": 350,
+      "decayRatePerHourPct": 2.8,
+      "maxFreshWindowHours": 10,
+      "suitableProcessors": [
+        "animal_feed"
+      ],
+      "defaultImageUrl": "/src/assets/images/fish_tiger_prawns_1794821249259.jpg"
+    }
+  ],
+  "fishListings": [
+    {
+      "id": "lst-mackerel-1",
+      "fishermanId": "usr-fish-1",
+      "fishermanName": "Ramesh Mogaveera",
+      "boatName": "Sea Breeze IV",
+      "speciesId": "sp-mackerel",
+      "speciesName": "Indian Mackerel (Bangude)",
+      "localName": "ಬಂಗುಡೆ / Bangude",
+      "totalQuantityKg": 45,
+      "availableQuantityKg": 40,
+      "catchTimestamp": "2026-11-16T07:39:29.203Z",
+      "listedAt": "2026-11-16T08:09:29.203Z",
+      "locationName": "Mangalore Bunder Harbor",
+      "lat": 12.8582,
+      "lng": 74.8321,
+      "imageUrl": "/src/assets/images/fish_indian_mackerel_1794821247535.jpg",
+      "isLiveVerifiedCapture": true,
+      "freshnessScore": 92,
+      "freshnessGrade": "A",
+      "assessmentId": "asmt-1",
+      "aiStartingPrice": 255,
+      "minAcceptablePrice": 210,
+      "aiRecommendedFloor": 210,
+      "marketReferencePrice": 240,
+      "middlemanBaselinePrice": 175,
+      "storageTempC": 1.8,
+      "status": "active"
+    },
+    {
+      "id": "lst-pomfret-2",
+      "fishermanId": "usr-fish-1",
+      "fishermanName": "Ramesh Mogaveera",
+      "boatName": "Sea Breeze IV",
+      "speciesId": "sp-pomfret",
+      "speciesName": "Silver Pomfret (Manji)",
+      "localName": "ಮಾಂಜಿ / Manji",
+      "totalQuantityKg": 28,
+      "availableQuantityKg": 24,
+      "catchTimestamp": "2026-11-16T08:09:29.203Z",
+      "listedAt": "2026-11-16T08:39:29.203Z",
+      "locationName": "Panambur Dock",
+      "lat": 12.948,
+      "lng": 74.801,
+      "imageUrl": "/src/assets/images/fish_silver_pomfret_1794821248720.jpg",
+      "isLiveVerifiedCapture": true,
+      "freshnessScore": 95,
+      "freshnessGrade": "A",
+      "assessmentId": "asmt-2",
+      "aiStartingPrice": 795,
+      "minAcceptablePrice": 675,
+      "aiRecommendedFloor": 675,
+      "marketReferencePrice": 760,
+      "middlemanBaselinePrice": 580,
+      "storageTempC": 1.4,
+      "status": "active"
+    },
+    {
+      "id": "lst-seer-3",
+      "fishermanId": "usr-fish-2",
+      "fishermanName": "Sudhakar Karkera",
+      "boatName": "Matsya Deepa",
+      "speciesId": "sp-seer",
+      "speciesName": "Seer Fish (Anjal)",
+      "localName": "ಅಂಜಲ್ / Anjal",
+      "totalQuantityKg": 35,
+      "availableQuantityKg": 30,
+      "catchTimestamp": "2026-11-16T06:39:29.203Z",
+      "listedAt": "2026-11-16T07:09:29.203Z",
+      "locationName": "Malpe Fishing Harbor",
+      "lat": 13.3477,
+      "lng": 74.7029,
+      "imageUrl": "/src/assets/images/fish_king_seer_1794821248743.jpg",
+      "isLiveVerifiedCapture": true,
+      "freshnessScore": 87,
+      "freshnessGrade": "A",
+      "assessmentId": "asmt-3",
+      "aiStartingPrice": 840,
+      "minAcceptablePrice": 705,
+      "aiRecommendedFloor": 705,
+      "marketReferencePrice": 820,
+      "middlemanBaselinePrice": 620,
+      "storageTempC": 2.1,
+      "status": "active"
+    },
+    {
+      "id": "lst-prawns-4",
+      "fishermanId": "usr-fish-2",
+      "fishermanName": "Sudhakar Karkera",
+      "boatName": "Matsya Deepa",
+      "speciesId": "sp-prawns",
+      "speciesName": "Tiger Prawns (Yetti)",
+      "localName": "ಸೀಗಡಿ / Yetti",
+      "totalQuantityKg": 22,
+      "availableQuantityKg": 18,
+      "catchTimestamp": "2026-11-16T06:09:29.203Z",
+      "listedAt": "2026-11-16T06:27:29.203Z",
+      "locationName": "Ullal Landing Center",
+      "lat": 12.8065,
+      "lng": 74.8559,
+      "imageUrl": "/src/assets/images/fish_tiger_prawns_1794821249259.jpg",
+      "isLiveVerifiedCapture": true,
+      "freshnessScore": 81,
+      "freshnessGrade": "B",
+      "assessmentId": "asmt-4",
+      "aiStartingPrice": 540,
+      "minAcceptablePrice": 455,
+      "aiRecommendedFloor": 455,
+      "marketReferencePrice": 540,
+      "middlemanBaselinePrice": 410,
+      "storageTempC": 3.2,
+      "status": "active"
+    },
+    {
+      "id": "lst-sardine-5",
+      "fishermanId": "usr-fish-1",
+      "fishermanName": "Ramesh Mogaveera",
+      "boatName": "Sea Breeze IV",
+      "speciesId": "sp-sardine",
+      "speciesName": "Oil Sardine (Bhootai)",
+      "localName": "ಭೂತಾಯಿ / Boodai",
+      "totalQuantityKg": 60,
+      "availableQuantityKg": 48,
+      "catchTimestamp": "2026-11-16T02:39:29.203Z",
+      "listedAt": "2026-11-16T03:09:29.203Z",
+      "locationName": "Mangalore Bunder Harbor",
+      "lat": 12.8582,
+      "lng": 74.8321,
+      "imageUrl": "/src/assets/images/fish_indian_mackerel_1794821247535.jpg",
+      "isLiveVerifiedCapture": true,
+      "freshnessScore": 61,
+      "freshnessGrade": "C",
+      "assessmentId": "asmt-5",
+      "aiStartingPrice": 145,
+      "minAcceptablePrice": 115,
+      "aiRecommendedFloor": 115,
+      "marketReferencePrice": 150,
+      "middlemanBaselinePrice": 95,
+      "storageTempC": 4.8,
+      "status": "active"
+    }
+  ],
+  "freshnessAssessments": [
+    {
+      "id": "asmt-1",
+      "listingId": "lst-mackerel-1",
+      "capturedAt": "2026-11-16T08:09:29.203Z",
+      "isLiveCameraCapture": true,
+      "gpsLat": 12.8582,
+      "gpsLng": 74.8321,
+      "imageUrl": "/src/assets/images/fish_indian_mackerel_1794821247535.jpg",
+      "freshnessScore": 92,
+      "grade": "A",
+      "gradeLabel": "Grade A – Prime Fresh (Demo Threshold)",
+      "eyeClarity": "Crystal clear, convex cornea with bright black pupil",
+      "gillColor": "Rich crimson red, moist and clean gill filaments",
+      "skinSheen": "Intact metallic blue-green stripes with natural marine sheen",
+      "observations": [
+        "Clear convex eyes with zero cloudiness",
+        "Healthy bright crimson gill colour",
+        "Firm dorsal muscle bounce and natural skin sheen"
+      ],
+      "handlingUrgency": "Ideal for direct retail, hotels, and premium dining.",
+      "confidence": 0.94,
+      "analysisMode": "demo-simulated",
+      "disclaimer": "Photograph-based grading is an AI visual estimate using configurable demo thresholds—not a laboratory food-safety certification."
+    },
+    {
+      "id": "asmt-2",
+      "listingId": "lst-pomfret-2",
+      "capturedAt": "2026-11-16T08:39:29.203Z",
+      "isLiveCameraCapture": true,
+      "gpsLat": 12.948,
+      "gpsLng": 74.801,
+      "imageUrl": "/src/assets/images/fish_silver_pomfret_1794821248720.jpg",
+      "freshnessScore": 95,
+      "grade": "A",
+      "gradeLabel": "Grade A – Prime Fresh (Demo Threshold)",
+      "eyeClarity": "Bright transparent eyes, zero sinking",
+      "gillColor": "Deep cherry red with crisp lamellae",
+      "skinSheen": "Pearlescent silver reflection, firm belly",
+      "observations": [
+        "Bright clear eyes indicating immediate post-landing icing",
+        "Firm pearlescent silver skin with zero bruising",
+        "Clean neutral marine aroma profile"
+      ],
+      "handlingUrgency": "Top-grade export & restaurant cut ready.",
+      "confidence": 0.96,
+      "analysisMode": "demo-simulated",
+      "disclaimer": "Photograph-based grading is an AI visual estimate using configurable demo thresholds—not a laboratory food-safety certification."
+    },
+    {
+      "id": "asmt-3",
+      "listingId": "lst-seer-3",
+      "capturedAt": "2026-11-16T07:09:29.203Z",
+      "isLiveCameraCapture": true,
+      "gpsLat": 13.3477,
+      "gpsLng": 74.7029,
+      "imageUrl": "/src/assets/images/fish_king_seer_1794821248743.jpg",
+      "freshnessScore": 87,
+      "grade": "A",
+      "gradeLabel": "Grade A – Prime Fresh (Demo Threshold)",
+      "eyeClarity": "Clear glossy eye surface",
+      "gillColor": "Deep red, well-preserved on crushed ice",
+      "skinSheen": "Distinct tiger stripes with moist translucent steaks",
+      "observations": [
+        "Clear eyes and firm lateral line",
+        "Thick translucent steak cuts without gaping",
+        "Stored continuously in chilled ice slurry"
+      ],
+      "handlingUrgency": "High demand for Mangalore tawa fry & hotel orders.",
+      "confidence": 0.91,
+      "analysisMode": "demo-simulated",
+      "disclaimer": "Photograph-based grading is an AI visual estimate using configurable demo thresholds—not a laboratory food-safety certification."
+    },
+    {
+      "id": "asmt-4",
+      "listingId": "lst-prawns-4",
+      "capturedAt": "2026-11-16T06:27:29.203Z",
+      "isLiveCameraCapture": true,
+      "gpsLat": 12.8065,
+      "gpsLng": 74.8559,
+      "imageUrl": "/src/assets/images/fish_tiger_prawns_1794821249259.jpg",
+      "freshnessScore": 81,
+      "grade": "B",
+      "gradeLabel": "Grade B – Good Fresh (Demo Threshold)",
+      "eyeClarity": "Glossy dark eyes firmly attached",
+      "gillColor": "Clean pale gill chamber, no blackening",
+      "skinSheen": "Tight translucent banded shell",
+      "observations": [
+        "Firm head-to-tail attachment with zero melanosis",
+        "Glossy striped carapace on crushed ice",
+        "Recommended sale within next 4 hours"
+      ],
+      "handlingUrgency": "Best sold within 4–5 hours on crushed ice.",
+      "confidence": 0.89,
+      "analysisMode": "demo-simulated",
+      "disclaimer": "Photograph-based grading is an AI visual estimate using configurable demo thresholds—not a laboratory food-safety certification."
+    },
+    {
+      "id": "asmt-5",
+      "listingId": "lst-sardine-5",
+      "capturedAt": "2026-11-16T03:09:29.203Z",
+      "isLiveCameraCapture": true,
+      "gpsLat": 12.8582,
+      "gpsLng": 74.8321,
+      "imageUrl": "/src/assets/images/fish_indian_mackerel_1794821247535.jpg",
+      "freshnessScore": 61,
+      "grade": "C",
+      "gradeLabel": "Grade C – Same-Day Sale (Demo Threshold)",
+      "eyeClarity": "Slightly cloudy outer lens",
+      "gillColor": "Pale pink-brown gill edges",
+      "skinSheen": "Reduced surface luster, soft belly",
+      "observations": [
+        "Approaching fresh retail window threshold",
+        "Dynamic price decay active to accelerate immediate sale",
+        "Auto-routes to dry-fish or fish-meal processor at expiry"
+      ],
+      "handlingUrgency": "Immediate same-day sale or processor recovery routing.",
+      "confidence": 0.85,
+      "analysisMode": "demo-simulated",
+      "disclaimer": "Photograph-based grading is an AI visual estimate using configurable demo thresholds—not a laboratory food-safety certification."
+    }
+  ],
+  "pricingRules": [
+    {
+      "speciesId": "sp-mackerel",
+      "baseDemandMultiplier": 1.04,
+      "maxFloorDiscountPct": 16,
+      "freshnessPremiumPct": 8,
+      "processorRecoveryDiscountPct": 58,
+      "gradeAThreshold": 85,
+      "gradeBThreshold": 68,
+      "gradeCThreshold": 48,
+      "updatedAt": "2026-11-16T09:39:29.203Z"
+    },
+    {
+      "speciesId": "sp-pomfret",
+      "baseDemandMultiplier": 1.04,
+      "maxFloorDiscountPct": 16,
+      "freshnessPremiumPct": 8,
+      "processorRecoveryDiscountPct": 58,
+      "gradeAThreshold": 85,
+      "gradeBThreshold": 68,
+      "gradeCThreshold": 48,
+      "updatedAt": "2026-11-16T09:39:29.203Z"
+    },
+    {
+      "speciesId": "sp-seer",
+      "baseDemandMultiplier": 1.04,
+      "maxFloorDiscountPct": 16,
+      "freshnessPremiumPct": 8,
+      "processorRecoveryDiscountPct": 58,
+      "gradeAThreshold": 85,
+      "gradeBThreshold": 68,
+      "gradeCThreshold": 48,
+      "updatedAt": "2026-11-16T09:39:29.203Z"
+    },
+    {
+      "speciesId": "sp-prawns",
+      "baseDemandMultiplier": 1.04,
+      "maxFloorDiscountPct": 16,
+      "freshnessPremiumPct": 8,
+      "processorRecoveryDiscountPct": 58,
+      "gradeAThreshold": 85,
+      "gradeBThreshold": 68,
+      "gradeCThreshold": 48,
+      "updatedAt": "2026-11-16T09:39:29.203Z"
+    },
+    {
+      "speciesId": "sp-sardine",
+      "baseDemandMultiplier": 1.04,
+      "maxFloorDiscountPct": 16,
+      "freshnessPremiumPct": 8,
+      "processorRecoveryDiscountPct": 58,
+      "gradeAThreshold": 85,
+      "gradeBThreshold": 68,
+      "gradeCThreshold": 48,
+      "updatedAt": "2026-11-16T09:39:29.203Z"
+    },
+    {
+      "speciesId": "sp-tuna",
+      "baseDemandMultiplier": 1.04,
+      "maxFloorDiscountPct": 16,
+      "freshnessPremiumPct": 8,
+      "processorRecoveryDiscountPct": 58,
+      "gradeAThreshold": 85,
+      "gradeBThreshold": 68,
+      "gradeCThreshold": 48,
+      "updatedAt": "2026-11-16T09:39:29.203Z"
+    },
+    {
+      "speciesId": "sp-squid",
+      "baseDemandMultiplier": 1.04,
+      "maxFloorDiscountPct": 16,
+      "freshnessPremiumPct": 8,
+      "processorRecoveryDiscountPct": 58,
+      "gradeAThreshold": 85,
+      "gradeBThreshold": 68,
+      "gradeCThreshold": 48,
+      "updatedAt": "2026-11-16T09:39:29.203Z"
+    },
+    {
+      "speciesId": "sp-crab",
+      "baseDemandMultiplier": 1.04,
+      "maxFloorDiscountPct": 16,
+      "freshnessPremiumPct": 8,
+      "processorRecoveryDiscountPct": 58,
+      "gradeAThreshold": 85,
+      "gradeBThreshold": 68,
+      "gradeCThreshold": 48,
+      "updatedAt": "2026-11-16T09:39:29.203Z"
+    }
+  ],
+  "priceHistory": [],
+  "negotiations": [
+    {
+      "id": "neg-seed-1",
+      "listingId": "lst-mackerel-1",
+      "buyerId": "usr-buyer-1",
+      "buyerName": "Ananya Shetty (Machali Kitchen)",
+      "requestedKg": 20,
+      "currentOfferPrice": 225,
+      "status": "open",
+      "updatedAt": "2026-11-16T09:21:29.203Z",
+      "messages": [
+        {
+          "id": "msg-1",
+          "sender": "buyer",
+          "text": "Looking for 20 kg of Grade A Bangude for lunch service at ₹200/kg.",
+          "offerPricePerKg": 200,
+          "quantityKg": 20,
+          "timestamp": "2026-11-16T09:15:29.203Z"
+        },
+        {
+          "id": "msg-2",
+          "sender": "ai_agent",
+          "text": "These Indian Mackerel scored 92/100 (Grade A) at Bunder Harbor just 2h ago. For 20 kg bulk pickup, I can meet you at ₹225/kg.",
+          "offerPricePerKg": 225,
+          "quantityKg": 20,
+          "decision": "counter",
+          "aiMode": "deterministic-fallback",
+          "timestamp": "2026-11-16T09:21:29.203Z"
+        }
+      ]
+    }
+  ],
+  "offers": [
+    {
+      "id": "off-1",
+      "listingId": "lst-mackerel-1",
+      "negotiationId": "neg-seed-1",
+      "buyerId": "usr-buyer-1",
+      "buyerName": "Ananya Shetty (Machali Kitchen)",
+      "offeredPricePerKg": 200,
+      "quantityKg": 20,
+      "status": "countered",
+      "createdAt": "2026-11-16T09:15:29.203Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "FF-2026-1041",
+      "listingId": "lst-pomfret-2",
+      "speciesName": "Silver Pomfret (Manji)",
+      "buyerId": "usr-buyer-1",
+      "buyerName": "Ananya Shetty (Machali Kitchen)",
+      "fishermanId": "usr-fish-1",
+      "fishermanName": "Ramesh Mogaveera",
+      "quantityKg": 12,
+      "agreedPricePerKg": 745,
+      "totalAmountInr": 8940,
+      "middlemanSavingsInr": 1980,
+      "fulfillmentMode": "dock_pickup",
+      "pickupLocation": "Panambur Dock Gate 2",
+      "status": "order_completed",
+      "createdAt": "2026-11-15T13:39:29.203Z",
+      "updatedAt": "2026-11-15T15:39:29.203Z"
+    },
+    {
+      "id": "FF-2026-1042",
+      "listingId": "lst-seer-3",
+      "speciesName": "Seer Fish (Anjal)",
+      "buyerId": "usr-buyer-1",
+      "buyerName": "Ananya Shetty (Machali Kitchen)",
+      "fishermanId": "usr-fish-2",
+      "fishermanName": "Sudhakar Karkera",
+      "quantityKg": 15,
+      "agreedPricePerKg": 790,
+      "totalAmountInr": 11850,
+      "middlemanSavingsInr": 2550,
+      "fulfillmentMode": "cold_delivery",
+      "pickupLocation": "Malpe Fishing Harbor",
+      "deliveryAddress": "Machali Kitchen, Kodialbail, Mangalore",
+      "status": "pickup_delivery_in_progress",
+      "createdAt": "2026-11-16T06:39:29.203Z",
+      "updatedAt": "2026-11-16T08:39:29.203Z"
+    }
+  ],
+  "payments": [
+    {
+      "id": "pay-1041",
+      "orderId": "FF-2026-1041",
+      "method": "upi_test",
+      "upiRef": "DEMO-UPI-8849201",
+      "amountInr": 8940,
+      "status": "test_completed",
+      "isSimulatedTestPayment": true,
+      "paidAt": "2026-11-15T14:09:29.203Z"
+    },
+    {
+      "id": "pay-1042",
+      "orderId": "FF-2026-1042",
+      "method": "upi_test",
+      "upiRef": "DEMO-UPI-8849317",
+      "amountInr": 11850,
+      "status": "test_completed",
+      "isSimulatedTestPayment": true,
+      "paidAt": "2026-11-16T07:09:29.203Z"
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "del-1042",
+      "orderId": "FF-2026-1042",
+      "driverName": "Prashanth Kulal",
+      "vehicleInfo": "KA-19-C-4410 · Chilled Insulated Van",
+      "status": "in_transit",
+      "etaMinutes": 22,
+      "updatedAt": "2026-11-16T09:27:29.203Z"
+    }
+  ],
+  "processorRequests": [
+    {
+      "id": "proc-req-1",
+      "listingId": "lst-past-sardine",
+      "speciesName": "Oil Sardine (Bhootai)",
+      "fishermanId": "usr-fish-1",
+      "fishermanName": "Ramesh Mogaveera",
+      "locationName": "Mangalore Bunder Harbor",
+      "quantityKg": 85,
+      "recoveryPricePerKg": 62,
+      "suitableCategory": "fish_meal",
+      "freshnessScoreAtExpiry": 44,
+      "safetyChecklistPassed": true,
+      "safetyNotes": "Verified suitable for coastal fish-meal & dry curing; no contamination.",
+      "status": "completed",
+      "processorId": "usr-proc-1",
+      "processorName": "Karavali Dry-Fish & Marine Meal",
+      "createdAt": "2026-11-15T07:39:29.203Z",
+      "acceptedAt": "2026-11-15T08:39:29.203Z"
+    },
+    {
+      "id": "proc-req-2",
+      "listingId": "lst-past-mackerel",
+      "speciesName": "Indian Mackerel (Bangude)",
+      "fishermanId": "usr-fish-2",
+      "fishermanName": "Sudhakar Karkera",
+      "locationName": "Malpe Fishing Harbor",
+      "quantityKg": 54,
+      "recoveryPricePerKg": 95,
+      "suitableCategory": "dry_fish",
+      "freshnessScoreAtExpiry": 46,
+      "safetyChecklistPassed": true,
+      "safetyNotes": "Salt-curing batch inspection passed at Ullal yard.",
+      "status": "accepted_by_processor",
+      "processorId": "usr-proc-1",
+      "processorName": "Karavali Dry-Fish & Marine Meal",
+      "createdAt": "2026-11-16T00:39:29.203Z",
+      "acceptedAt": "2026-11-16T01:39:29.203Z"
+    }
+  ],
+  "temperatureReadings": [
+    {
+      "id": "temp-1",
+      "deviceId": "ESP32-ICEBOX-BUNDER-01",
+      "listingId": "lst-mackerel-1",
+      "locationLabel": "Sea Breeze IV · Insulated Crate A",
+      "temperatureC": 1.8,
+      "humidityPct": 86,
+      "status": "optimal",
+      "isSimulated": true,
+      "recordedAt": "2026-11-16T09:33:29.203Z"
+    },
+    {
+      "id": "temp-2",
+      "deviceId": "ESP32-ICEBOX-BUNDER-01",
+      "listingId": "lst-mackerel-1",
+      "locationLabel": "Sea Breeze IV · Insulated Crate A",
+      "temperatureC": 2,
+      "humidityPct": 85,
+      "status": "optimal",
+      "isSimulated": true,
+      "recordedAt": "2026-11-16T08:39:29.203Z"
+    },
+    {
+      "id": "temp-3",
+      "deviceId": "ESP32-ICEBOX-ULLAL-04",
+      "listingId": "lst-sardine-5",
+      "locationLabel": "Bunder Dock Crate C",
+      "temperatureC": 4.8,
+      "humidityPct": 89,
+      "status": "warning",
+      "isSimulated": true,
+      "recordedAt": "2026-11-16T09:30:29.203Z"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "notif-1",
+      "targetRole": "fisherman",
+      "title": "Offer received on Bangude (40 kg)",
+      "message": "Machali Kitchen offered ₹200/kg; AI countered at ₹225/kg within your band.",
+      "severity": "info",
+      "read": false,
+      "createdAt": "2026-11-16T09:21:29.203Z"
+    },
+    {
+      "id": "notif-2",
+      "targetRole": "fisherman",
+      "title": "Freshness window alert: Oil Sardine",
+      "message": "48 kg Bhootai is at Grade C (61/100). Dynamic decay active before processor routing.",
+      "severity": "warning",
+      "read": false,
+      "createdAt": "2026-11-16T09:09:29.203Z"
+    },
+    {
+      "id": "notif-3",
+      "targetRole": "processor",
+      "title": "Zero-Waste batch recovered",
+      "message": "54 kg Malpe Mackerel routed to dry-fish curing at ₹95/kg.",
+      "severity": "success",
+      "read": false,
+      "createdAt": "2026-11-16T01:39:29.203Z"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "txn-1",
+      "orderId": "FF-2026-1041",
+      "type": "direct_sale",
+      "speciesName": "Silver Pomfret (Manji)",
+      "quantityKg": 12,
+      "pricePerKg": 745,
+      "totalInr": 8940,
+      "fishermanExtraIncomeInr": 1980,
+      "catchToSaleMinutes": 110,
+      "timestamp": "2026-11-15T14:09:29.203Z"
+    },
+    {
+      "id": "txn-2",
+      "orderId": "FF-2026-1042",
+      "type": "direct_sale",
+      "speciesName": "Seer Fish (Anjal)",
+      "quantityKg": 15,
+      "pricePerKg": 790,
+      "totalInr": 11850,
+      "fishermanExtraIncomeInr": 2550,
+      "catchToSaleMinutes": 135,
+      "timestamp": "2026-11-16T07:09:29.203Z"
+    },
+    {
+      "id": "txn-3",
+      "processorRequestId": "proc-req-1",
+      "type": "processor_recovery",
+      "speciesName": "Oil Sardine (Bhootai)",
+      "quantityKg": 85,
+      "pricePerKg": 62,
+      "totalInr": 5270,
+      "fishermanExtraIncomeInr": 5270,
+      "catchToSaleMinutes": 540,
+      "timestamp": "2026-11-15T08:39:29.203Z"
+    },
+    {
+      "id": "txn-4",
+      "processorRequestId": "proc-req-2",
+      "type": "processor_recovery",
+      "speciesName": "Indian Mackerel (Bangude)",
+      "quantityKg": 54,
+      "pricePerKg": 95,
+      "totalInr": 5130,
+      "fishermanExtraIncomeInr": 5130,
+      "catchToSaleMinutes": 490,
+      "timestamp": "2026-11-16T01:39:29.203Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "aud-1",
+      "actorId": "usr-admin-1",
+      "actorRole": "admin",
+      "action": "INITIALIZE_HARBOR_RULES",
+      "entityType": "pricing_rules",
+      "entityId": "mangalore-2026",
+      "details": "Loaded Mangalore Bunder & Malpe baseline pricing thresholds.",
+      "timestamp": "2026-11-14T09:39:29.203Z"
+    },
+    {
+      "id": "aud-2",
+      "actorId": "usr-proc-1",
+      "actorRole": "processor",
+      "action": "ZERO_WASTE_BATCH_ACCEPTED",
+      "entityType": "processor_requests",
+      "entityId": "proc-req-2",
+      "details": "Accepted 54 kg Mackerel for dry-fish processing after safety checklist.",
+      "timestamp": "2026-11-16T01:39:29.203Z"
+    }
+  ]
+}

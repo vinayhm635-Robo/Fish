@@ -1,0 +1,6 @@
+{
+  "name": "FishFresh AI",
+  "description": "AI-powered fish freshness detection, fair-price negotiation, and zero-waste fisheries marketplace starting from Mangalore, Karnataka.",
+  "requestFramePermissions": ["camera", "microphone", "geolocation"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
